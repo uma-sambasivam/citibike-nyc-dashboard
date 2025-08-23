@@ -1,0 +1,2633 @@
+{
+  "yearly_stats": {
+    "2024": {
+      "total_trips": 45355660.0,
+      "total_duration": 36628802166.92,
+      "subscriber_trips": 36543558.0,
+      "customer_trips": 8812102.0,
+      "co2_saved_lbs": 48439844.88,
+      "cars_equivalent": 4535.566,
+      "avg_duration_minutes": 13.459842412508896
+    },
+    "2020": {
+      "total_trips": 336802.0,
+      "total_duration": 530363773,
+      "subscriber_trips": 231531.0,
+      "customer_trips": 105271.0,
+      "co2_saved_lbs": 359704.53599999996,
+      "cars_equivalent": 33.6802,
+      "avg_duration_minutes": 26.24508232334329
+    },
+    "2018": {
+      "total_trips": 35450570.0,
+      "total_duration": 34939910042,
+      "subscriber_trips": 31561375.0,
+      "customer_trips": 3889195.0,
+      "co2_saved_lbs": 37861208.76,
+      "cars_equivalent": 3545.057,
+      "avg_duration_minutes": 16.42658592043325
+    },
+    "2015": {
+      "total_trips": 9937969.0,
+      "total_duration": 9620825097,
+      "subscriber_trips": 8626638.0,
+      "customer_trips": 1311331.0,
+      "co2_saved_lbs": 10613750.891999999,
+      "cars_equivalent": 993.7968999999999,
+      "avg_duration_minutes": 16.134794237132358
+    },
+    "2013": {
+      "total_trips": 11229776.0,
+      "total_duration": 10528273718,
+      "subscriber_trips": 9415258.0,
+      "customer_trips": 1814518.0,
+      "co2_saved_lbs": 11993400.768,
+      "cars_equivalent": 1122.9776,
+      "avg_duration_minutes": 15.625532391147724
+    },
+    "2021": {
+      "total_trips": 644443.0,
+      "total_duration": 853305280.0,
+      "subscriber_trips": 384014.0,
+      "customer_trips": 260429.0,
+      "co2_saved_lbs": 688265.124,
+      "cars_equivalent": 64.4443,
+      "avg_duration_minutes": 22.06828946340742
+    },
+    "2014": {
+      "total_trips": 8081216.0,
+      "total_duration": 6878530700,
+      "subscriber_trips": 7287721.0,
+      "customer_trips": 793495.0,
+      "co2_saved_lbs": 8630738.688,
+      "cars_equivalent": 808.1216,
+      "avg_duration_minutes": 14.18625344667601
+    },
+    "2022": {
+      "total_trips": 786983.0,
+      "total_duration": 804882117.0,
+      "subscriber_trips": 524048.0,
+      "customer_trips": 262935.0,
+      "co2_saved_lbs": 840497.844,
+      "cars_equivalent": 78.6983,
+      "avg_duration_minutes": 17.045732817608513
+    },
+    "2019": {
+      "total_trips": 20956644.0,
+      "total_duration": 20398532876,
+      "subscriber_trips": 18041442.0,
+      "customer_trips": 2915202.0,
+      "co2_saved_lbs": 22381695.792,
+      "cars_equivalent": 2095.6644,
+      "avg_duration_minutes": 16.222804945931863
+    },
+    "2025": {
+      "total_trips": 25670339.0,
+      "total_duration": 19462560153.16,
+      "subscriber_trips": 21244400.0,
+      "customer_trips": 4425939.0,
+      "co2_saved_lbs": 27415922.051999997,
+      "cars_equivalent": 2567.0339,
+      "avg_duration_minutes": 12.636218109650466
+    },
+    "2016": {
+      "total_trips": 13845655.0,
+      "total_duration": 13279560943,
+      "subscriber_trips": 12301711.0,
+      "customer_trips": 1508073.0,
+      "co2_saved_lbs": 14787159.540000001,
+      "cars_equivalent": 1384.5655,
+      "avg_duration_minutes": 15.985232603056097
+    },
+    "2023": {
+      "total_trips": 988851.0,
+      "total_duration": 741212830.0,
+      "subscriber_trips": 731783.0,
+      "customer_trips": 257068.0,
+      "co2_saved_lbs": 1056092.868,
+      "cars_equivalent": 98.8851,
+      "avg_duration_minutes": 12.492829725273744
+    },
+    "2017": {
+      "total_trips": 16364657.0,
+      "total_duration": 16276062093,
+      "subscriber_trips": 14579325.0,
+      "customer_trips": 1769423.0,
+      "co2_saved_lbs": 17477453.676,
+      "cars_equivalent": 1636.4657,
+      "avg_duration_minutes": 16.57643674108171
+    }
+  },
+  "monthly_stats": [
+    {
+      "year": 2013,
+      "month": 6,
+      "trips": 577703,
+      "avg_duration": 22.876171319865055,
+      "subscribers": 337384,
+      "customers": 240319
+    },
+    {
+      "year": 2013,
+      "month": 6,
+      "trips": 577703,
+      "avg_duration": 22.876171319865055,
+      "subscribers": 337384,
+      "customers": 240319
+    },
+    {
+      "year": 2013,
+      "month": 7,
+      "trips": 843416,
+      "avg_duration": 16.635011726123288,
+      "subscribers": 668501,
+      "customers": 174915
+    },
+    {
+      "year": 2013,
+      "month": 7,
+      "trips": 843416,
+      "avg_duration": 16.635011726123288,
+      "subscribers": 668501,
+      "customers": 174915
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "trips": 1958,
+      "avg_duration": 16.536389172625128,
+      "subscribers": 1390,
+      "customers": 568
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "trips": 1001958,
+      "avg_duration": 16.32633711526165,
+      "subscribers": 815902,
+      "customers": 186056
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 16.325925833333333,
+      "subscribers": 814512,
+      "customers": 185488
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "trips": 1034359,
+      "avg_duration": 15.083676283250464,
+      "subscribers": 889190,
+      "customers": 145169
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "trips": 34359,
+      "avg_duration": 13.868208717754689,
+      "subscribers": 31124,
+      "customers": 3235
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 15.125438533333332,
+      "subscribers": 858066,
+      "customers": 141934
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "trips": 1037712,
+      "avg_duration": 13.76024590637865,
+      "subscribers": 940266,
+      "customers": 97446
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "trips": 37712,
+      "avg_duration": 12.838462116390893,
+      "subscribers": 35976,
+      "customers": 1736
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 13.795008216666668,
+      "subscribers": 904290,
+      "customers": 95710
+    },
+    {
+      "year": 2013,
+      "month": 11,
+      "trips": 675774,
+      "avg_duration": 12.854731093531269,
+      "subscribers": 631801,
+      "customers": 43973
+    },
+    {
+      "year": 2013,
+      "month": 11,
+      "trips": 675774,
+      "avg_duration": 12.854731093531269,
+      "subscribers": 631801,
+      "customers": 43973
+    },
+    {
+      "year": 2013,
+      "month": 12,
+      "trips": 443966,
+      "avg_duration": 12.531231483191656,
+      "subscribers": 424585,
+      "customers": 19381
+    },
+    {
+      "year": 2013,
+      "month": 12,
+      "trips": 443966,
+      "avg_duration": 12.531231483191656,
+      "subscribers": 424585,
+      "customers": 19381
+    },
+    {
+      "year": 2014,
+      "month": 1,
+      "trips": 300400,
+      "avg_duration": 12.232815745672436,
+      "subscribers": 293146,
+      "customers": 7254
+    },
+    {
+      "year": 2014,
+      "month": 2,
+      "trips": 224736,
+      "avg_duration": 14.575330165171579,
+      "subscribers": 218019,
+      "customers": 6717
+    },
+    {
+      "year": 2014,
+      "month": 3,
+      "trips": 439117,
+      "avg_duration": 11.92594247850421,
+      "subscribers": 416235,
+      "customers": 22882
+    },
+    {
+      "year": 2014,
+      "month": 4,
+      "trips": 670780,
+      "avg_duration": 13.86180454098214,
+      "subscribers": 607733,
+      "customers": 63047
+    },
+    {
+      "year": 2014,
+      "month": 5,
+      "trips": 866117,
+      "avg_duration": 14.666756916213398,
+      "subscribers": 758566,
+      "customers": 107551
+    },
+    {
+      "year": 2014,
+      "month": 6,
+      "trips": 936880,
+      "avg_duration": 14.870667036689152,
+      "subscribers": 818675,
+      "customers": 118205
+    },
+    {
+      "year": 2014,
+      "month": 7,
+      "trips": 968842,
+      "avg_duration": 14.334734249753831,
+      "subscribers": 849778,
+      "customers": 119064
+    },
+    {
+      "year": 2014,
+      "month": 8,
+      "trips": 963489,
+      "avg_duration": 14.740029638809231,
+      "subscribers": 827615,
+      "customers": 135874
+    },
+    {
+      "year": 2014,
+      "month": 9,
+      "trips": 953887,
+      "avg_duration": 14.973643716009688,
+      "subscribers": 854572,
+      "customers": 99315
+    },
+    {
+      "year": 2014,
+      "month": 10,
+      "trips": 828711,
+      "avg_duration": 14.728277851587185,
+      "subscribers": 759628,
+      "customers": 69083
+    },
+    {
+      "year": 2014,
+      "month": 11,
+      "trips": 529188,
+      "avg_duration": 13.195366171064599,
+      "subscribers": 501180,
+      "customers": 28008
+    },
+    {
+      "year": 2014,
+      "month": 12,
+      "trips": 399069,
+      "avg_duration": 12.429297481554986,
+      "subscribers": 382574,
+      "customers": 16495
+    },
+    {
+      "year": 2015,
+      "month": 1,
+      "trips": 285552,
+      "avg_duration": 10.905426390523152,
+      "subscribers": 279924,
+      "customers": 5628
+    },
+    {
+      "year": 2015,
+      "month": 2,
+      "trips": 196930,
+      "avg_duration": 10.82305345384993,
+      "subscribers": 194665,
+      "customers": 2265
+    },
+    {
+      "year": 2015,
+      "month": 3,
+      "trips": 341826,
+      "avg_duration": 12.238611213502386,
+      "subscribers": 328975,
+      "customers": 12851
+    },
+    {
+      "year": 2015,
+      "month": 4,
+      "trips": 652390,
+      "avg_duration": 15.498074694584528,
+      "subscribers": 586177,
+      "customers": 66213
+    },
+    {
+      "year": 2015,
+      "month": 5,
+      "trips": 961986,
+      "avg_duration": 16.670562790588082,
+      "subscribers": 794442,
+      "customers": 167544
+    },
+    {
+      "year": 2015,
+      "month": 6,
+      "trips": 941219,
+      "avg_duration": 15.076713053320569,
+      "subscribers": 810838,
+      "customers": 130381
+    },
+    {
+      "year": 2015,
+      "month": 7,
+      "trips": 85676,
+      "avg_duration": 14.254119006489566,
+      "subscribers": 75800,
+      "customers": 9876
+    },
+    {
+      "year": 2015,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 16.28836735,
+      "subscribers": 829514,
+      "customers": 170486
+    },
+    {
+      "year": 2015,
+      "month": 8,
+      "trips": 179044,
+      "avg_duration": 16.77049877869872,
+      "subscribers": 143500,
+      "customers": 35544
+    },
+    {
+      "year": 2015,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 16.991544783333335,
+      "subscribers": 814548,
+      "customers": 185452
+    },
+    {
+      "year": 2015,
+      "month": 9,
+      "trips": 289699,
+      "avg_duration": 18.38651916874641,
+      "subscribers": 246929,
+      "customers": 42770
+    },
+    {
+      "year": 2015,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 17.261443333333332,
+      "subscribers": 832663,
+      "customers": 167337
+    },
+    {
+      "year": 2015,
+      "month": 10,
+      "trips": 212277,
+      "avg_duration": 16.30245112125509,
+      "subscribers": 191552,
+      "customers": 20725
+    },
+    {
+      "year": 2015,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 18.35941113333333,
+      "subscribers": 874214,
+      "customers": 125786
+    },
+    {
+      "year": 2015,
+      "month": 11,
+      "trips": 987245,
+      "avg_duration": 16.200311168960084,
+      "subscribers": 886649,
+      "customers": 100596
+    },
+    {
+      "year": 2015,
+      "month": 12,
+      "trips": 804125,
+      "avg_duration": 15.761860324369138,
+      "subscribers": 736248,
+      "customers": 67877
+    },
+    {
+      "year": 2016,
+      "month": 1,
+      "trips": 509478,
+      "avg_duration": 14.120198844045605,
+      "subscribers": 484935,
+      "customers": 24543
+    },
+    {
+      "year": 2016,
+      "month": 2,
+      "trips": 560874,
+      "avg_duration": 14.618249315651406,
+      "subscribers": 531049,
+      "customers": 29825
+    },
+    {
+      "year": 2016,
+      "month": 3,
+      "trips": 919921,
+      "avg_duration": 16.996497797093447,
+      "subscribers": 826683,
+      "customers": 93238
+    },
+    {
+      "year": 2016,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 17.789468466666666,
+      "subscribers": 873270,
+      "customers": 126730
+    },
+    {
+      "year": 2016,
+      "month": 4,
+      "trips": 13149,
+      "avg_duration": 26.75552767003828,
+      "subscribers": 9414,
+      "customers": 3735
+    },
+    {
+      "year": 2016,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 17.194728983333334,
+      "subscribers": 879444,
+      "customers": 120556
+    },
+    {
+      "year": 2016,
+      "month": 5,
+      "trips": 212280,
+      "avg_duration": 19.177344230890018,
+      "subscribers": 172822,
+      "customers": 39458
+    },
+    {
+      "year": 2016,
+      "month": 6,
+      "trips": 460318,
+      "avg_duration": 15.979259120868617,
+      "subscribers": 416761,
+      "customers": 43557
+    },
+    {
+      "year": 2016,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 16.73381735,
+      "subscribers": 886725,
+      "customers": 113275
+    },
+    {
+      "year": 2016,
+      "month": 7,
+      "trips": 380110,
+      "avg_duration": 16.466971797637527,
+      "subscribers": 324666,
+      "customers": 55444
+    },
+    {
+      "year": 2016,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 16.75011405,
+      "subscribers": 853553,
+      "customers": 146447
+    },
+    {
+      "year": 2016,
+      "month": 8,
+      "trips": 557663,
+      "avg_duration": 16.51647309097669,
+      "subscribers": 482973,
+      "customers": 74690
+    },
+    {
+      "year": 2016,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 16.2386212,
+      "subscribers": 856450,
+      "customers": 143550
+    },
+    {
+      "year": 2016,
+      "month": 9,
+      "trips": 648856,
+      "avg_duration": 14.904009826525455,
+      "subscribers": 583305,
+      "customers": 65551
+    },
+    {
+      "year": 2016,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 16.36332133333333,
+      "subscribers": 844334,
+      "customers": 155666
+    },
+    {
+      "year": 2016,
+      "month": 10,
+      "trips": 573872,
+      "avg_duration": 14.872327946533954,
+      "subscribers": 517425,
+      "customers": 50519
+    },
+    {
+      "year": 2016,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 15.742857733333333,
+      "subscribers": 885156,
+      "customers": 102823
+    },
+    {
+      "year": 2016,
+      "month": 11,
+      "trips": 196942,
+      "avg_duration": 13.618026034737808,
+      "subscribers": 181187,
+      "customers": 13738
+    },
+    {
+      "year": 2016,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 14.845420583333333,
+      "subscribers": 917281,
+      "customers": 72202
+    },
+    {
+      "year": 2016,
+      "month": 12,
+      "trips": 812192,
+      "avg_duration": 12.932621617384395,
+      "subscribers": 774278,
+      "customers": 32526
+    },
+    {
+      "year": 2017,
+      "month": 1,
+      "trips": 726676,
+      "avg_duration": 12.96498178005053,
+      "subscribers": 700465,
+      "customers": 23018
+    },
+    {
+      "year": 2017,
+      "month": 2,
+      "trips": 791647,
+      "avg_duration": 13.547896389847159,
+      "subscribers": 741151,
+      "customers": 42916
+    },
+    {
+      "year": 2017,
+      "month": 3,
+      "trips": 727665,
+      "avg_duration": 13.158560303619568,
+      "subscribers": 695752,
+      "customers": 26777
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "trips": 315404,
+      "avg_duration": 16.511613834954534,
+      "subscribers": 269392,
+      "customers": 46012
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 18.597984750000002,
+      "subscribers": 857152,
+      "customers": 142848
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "trips": 523268,
+      "avg_duration": 17.526628037640368,
+      "subscribers": 438479,
+      "customers": 84789
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 15.792315366666665,
+      "subscribers": 895029,
+      "customers": 104971
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "trips": 731594,
+      "avg_duration": 18.649751774891538,
+      "subscribers": 645795,
+      "customers": 85799
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 17.3176204,
+      "subscribers": 871157,
+      "customers": 128843
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "trips": 735599,
+      "avg_duration": 16.133803154526674,
+      "subscribers": 633994,
+      "customers": 101605
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 18.79838645,
+      "subscribers": 839893,
+      "customers": 160107
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "trips": 816498,
+      "avg_duration": 18.81069182043312,
+      "subscribers": 701981,
+      "customers": 114517
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 19.662820583333332,
+      "subscribers": 856458,
+      "customers": 143542
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "trips": 878098,
+      "avg_duration": 15.767510099480164,
+      "subscribers": 782889,
+      "customers": 95209
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 17.365091816666666,
+      "subscribers": 860220,
+      "customers": 139780
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 18.77521888333333,
+      "subscribers": 889693,
+      "customers": 110307
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "trips": 897592,
+      "avg_duration": 16.707181529395687,
+      "subscribers": 802899,
+      "customers": 94693
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 14.856568900000001,
+      "subscribers": 934248,
+      "customers": 65752
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "trips": 330649,
+      "avg_duration": 14.94511823716388,
+      "subscribers": 307105,
+      "customers": 23544
+    },
+    {
+      "year": 2017,
+      "month": 12,
+      "trips": 889967,
+      "avg_duration": 12.749952694875203,
+      "subscribers": 855573,
+      "customers": 34394
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "trips": 12677,
+      "avg_duration": 8.888121532434067,
+      "subscribers": 12492,
+      "customers": 185
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "trips": 718994,
+      "avg_duration": 13.780177581454089,
+      "subscribers": 696886,
+      "customers": 22108
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "trips": 718994,
+      "avg_duration": 13.780177581454089,
+      "subscribers": 696886,
+      "customers": 22108
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "trips": 843114,
+      "avg_duration": 14.62329651348058,
+      "subscribers": 809756,
+      "customers": 33358
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "trips": 843114,
+      "avg_duration": 14.62329651348058,
+      "subscribers": 809756,
+      "customers": 33358
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "trips": 15104,
+      "avg_duration": 8.05771760240113,
+      "subscribers": 14915,
+      "customers": 189
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "trips": 976672,
+      "avg_duration": 14.699895341868439,
+      "subscribers": 917637,
+      "customers": 59035
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "trips": 976672,
+      "avg_duration": 14.699895341868439,
+      "subscribers": 917637,
+      "customers": 59035
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "trips": 17109,
+      "avg_duration": 8.939280495645566,
+      "subscribers": 16673,
+      "customers": 436
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 15.659799833333333,
+      "subscribers": 888325,
+      "customers": 111675
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "trips": 23634,
+      "avg_duration": 11.154751629009054,
+      "subscribers": 21891,
+      "customers": 1743
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "trips": 1307543,
+      "avg_duration": 16.181788705992844,
+      "subscribers": 1158232,
+      "customers": 149311
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "trips": 307543,
+      "avg_duration": 17.879076150868876,
+      "subscribers": 269907,
+      "customers": 37636
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "trips": 34456,
+      "avg_duration": 13.599187853107344,
+      "subscribers": 31998,
+      "customers": 2458
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "trips": 1824710,
+      "avg_duration": 18.698569562651965,
+      "subscribers": 1582116,
+      "customers": 242594
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 16.674369383333335,
+      "subscribers": 878081,
+      "customers": 121919
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "trips": 824710,
+      "avg_duration": 21.153008309991794,
+      "subscribers": 704035,
+      "customers": 120675
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "trips": 953103,
+      "avg_duration": 23.418501218301344,
+      "subscribers": 813839,
+      "customers": 139264
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 17.110287983333333,
+      "subscribers": 880949,
+      "customers": 119051
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "trips": 1953103,
+      "avg_duration": 20.188659661062424,
+      "subscribers": 1694788,
+      "customers": 258315
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "trips": 40937,
+      "avg_duration": 12.767135272899006,
+      "subscribers": 37750,
+      "customers": 3187
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "trips": 913625,
+      "avg_duration": 19.92247459296757,
+      "subscribers": 763217,
+      "customers": 150408
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "trips": 1913625,
+      "avg_duration": 17.909067206654036,
+      "subscribers": 1628746,
+      "customers": 284879
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "trips": 42268,
+      "avg_duration": 12.191299564682502,
+      "subscribers": 38474,
+      "customers": 3794
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 16.069567883333335,
+      "subscribers": 865529,
+      "customers": 134471
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "trips": 977177,
+      "avg_duration": 16.721743996566982,
+      "subscribers": 834509,
+      "customers": 142668
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "trips": 44432,
+      "avg_duration": 11.63256961949346,
+      "subscribers": 41274,
+      "customers": 3158
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "trips": 1977177,
+      "avg_duration": 16.86668883632236,
+      "subscribers": 1703456,
+      "customers": 273721
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 17.0083256,
+      "subscribers": 868947,
+      "customers": 131053
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "trips": 877884,
+      "avg_duration": 15.27753750305659,
+      "subscribers": 770857,
+      "customers": 107027
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 16.8694407,
+      "subscribers": 845874,
+      "customers": 154126
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "trips": 39022,
+      "avg_duration": 12.372924247860182,
+      "subscribers": 35498,
+      "customers": 3524
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "trips": 1877884,
+      "avg_duration": 16.125248648656324,
+      "subscribers": 1616731,
+      "customers": 261153
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "trips": 878657,
+      "avg_duration": 13.95159085589333,
+      "subscribers": 804574,
+      "customers": 74083
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 15.925834799999999,
+      "subscribers": 881682,
+      "customers": 118318
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "trips": 1878657,
+      "avg_duration": 15.00247132215549,
+      "subscribers": 1686256,
+      "customers": 192401
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "trips": 39138,
+      "avg_duration": 9.832005978844089,
+      "subscribers": 37134,
+      "customers": 2004
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "trips": 260355,
+      "avg_duration": 13.193928226203964,
+      "subscribers": 247498,
+      "customers": 12857
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "trips": 1260355,
+      "avg_duration": 14.161064263640007,
+      "subscribers": 1164813,
+      "customers": 95542
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "trips": 24910,
+      "avg_duration": 9.672108925465007,
+      "subscribers": 24012,
+      "customers": 898
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 14.412862966666667,
+      "subscribers": 917315,
+      "customers": 82685
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "trips": 1000000,
+      "avg_duration": 13.685246816666668,
+      "subscribers": 940820,
+      "customers": 59180
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "trips": 20205,
+      "avg_duration": 9.350120432236245,
+      "subscribers": 19614,
+      "customers": 591
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "trips": 1016505,
+      "avg_duration": 13.71779081263742,
+      "subscribers": 955408,
+      "customers": 61097
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "trips": 16505,
+      "avg_duration": 15.689556699989902,
+      "subscribers": 14588,
+      "customers": 1917
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "trips": 19676,
+      "avg_duration": 7.44888019245104,
+      "subscribers": 19267,
+      "customers": 409
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "trips": 967287,
+      "avg_duration": 12.930681276601463,
+      "subscribers": 927114,
+      "customers": 40173
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "trips": 943744,
+      "avg_duration": 13.412888717703106,
+      "subscribers": 897393,
+      "customers": 46351
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "trips": 18565,
+      "avg_duration": 10.088992728252087,
+      "subscribers": 18127,
+      "customers": 438
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "trips": 327960,
+      "avg_duration": 15.843908708379072,
+      "subscribers": 293548,
+      "customers": 34412
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "trips": 23606,
+      "avg_duration": 9.102939224490948,
+      "subscribers": 22529,
+      "customers": 1077
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 14.3393996,
+      "subscribers": 927754,
+      "customers": 72246
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "trips": 766094,
+      "avg_duration": 16.559526877032496,
+      "subscribers": 652795,
+      "customers": 113299
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "trips": 33056,
+      "avg_duration": 11.899927900129075,
+      "subscribers": 30208,
+      "customers": 2848
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 18.49545695,
+      "subscribers": 883866,
+      "customers": 116134
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "trips": 36135,
+      "avg_duration": 13.735333241086666,
+      "subscribers": 32364,
+      "customers": 3771
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "trips": 924563,
+      "avg_duration": 18.80579241219906,
+      "subscribers": 750753,
+      "customers": 173810
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 16.844072266666664,
+      "subscribers": 879244,
+      "customers": 120756
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 18.782615500000002,
+      "subscribers": 830211,
+      "customers": 169789
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 17.92625251666667,
+      "subscribers": 831013,
+      "customers": 168987
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "trips": 39430,
+      "avg_duration": 16.228165948093668,
+      "subscribers": 33661,
+      "customers": 5769
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "trips": 125370,
+      "avg_duration": 20.6410349365877,
+      "subscribers": 91302,
+      "customers": 34068
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 18.8957431,
+      "subscribers": 807010,
+      "customers": 192990
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "trips": 181064,
+      "avg_duration": 14.353878646960927,
+      "subscribers": 159670,
+      "customers": 21394
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "trips": 43746,
+      "avg_duration": 13.535237507429251,
+      "subscribers": 37495,
+      "customers": 6251
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 16.141716716666668,
+      "subscribers": 836375,
+      "customers": 163625
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 18.306694699999998,
+      "subscribers": 807025,
+      "customers": 192975
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "trips": 344224,
+      "avg_duration": 16.308815141690683,
+      "subscribers": 280428,
+      "customers": 63796
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "trips": 48711,
+      "avg_duration": 13.047849903854708,
+      "subscribers": 41322,
+      "customers": 7389
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 17.110095166666667,
+      "subscribers": 812906,
+      "customers": 187094
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 16.694067,
+      "subscribers": 837244,
+      "customers": 162756
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "trips": 49244,
+      "avg_duration": 13.51586352313649,
+      "subscribers": 41856,
+      "customers": 7388
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 17.096522233333335,
+      "subscribers": 812915,
+      "customers": 187085
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "trips": 444900,
+      "avg_duration": 16.74824514872256,
+      "subscribers": 360334,
+      "customers": 84566
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 15.81151765,
+      "subscribers": 841406,
+      "customers": 158594
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 14.800636166666667,
+      "subscribers": 870545,
+      "customers": 129455
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "trips": 42253,
+      "avg_duration": 9.48723601479974,
+      "subscribers": 38197,
+      "customers": 4056
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "trips": 92573,
+      "avg_duration": 13.88127477774297,
+      "subscribers": 84869,
+      "customers": 7704
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 14.086682233333333,
+      "subscribers": 891962,
+      "customers": 108038
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "trips": 478708,
+      "avg_duration": 13.67378217340564,
+      "subscribers": 434254,
+      "customers": 44454
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "trips": 30797,
+      "avg_duration": 11.318058577134137,
+      "subscribers": 28403,
+      "customers": 2394
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "trips": 19728,
+      "avg_duration": 9.012168829413355,
+      "subscribers": 18492,
+      "customers": 1236
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "trips": 955210,
+      "avg_duration": 13.847328057006662,
+      "subscribers": 877585,
+      "customers": 77625
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "trips": 26020,
+      "avg_duration": 9.014959005892903,
+      "subscribers": 24436,
+      "customers": 1584
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "trips": 22962,
+      "avg_duration": 11.094882124089075,
+      "subscribers": 21453,
+      "customers": 1509
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "trips": 17719,
+      "avg_duration": 23.075207404481066,
+      "subscribers": 15192,
+      "customers": 2527
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "trips": 9268,
+      "avg_duration": 30.06163141993958,
+      "subscribers": 6692,
+      "customers": 2576
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "trips": 25077,
+      "avg_duration": 40.76201898153686,
+      "subscribers": 12952,
+      "customers": 12125
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "trips": 36921,
+      "avg_duration": 38.27645377969178,
+      "subscribers": 19825,
+      "customers": 17096
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "trips": 38680,
+      "avg_duration": 30.69536883833161,
+      "subscribers": 23264,
+      "customers": 15416
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "trips": 43267,
+      "avg_duration": 28.539639139914176,
+      "subscribers": 26328,
+      "customers": 16939
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "trips": 53833,
+      "avg_duration": 26.263100081115052,
+      "subscribers": 35284,
+      "customers": 18549
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "trips": 30086,
+      "avg_duration": 20.771518868133573,
+      "subscribers": 21194,
+      "customers": 8892
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "trips": 21275,
+      "avg_duration": 23.306567175871525,
+      "subscribers": 15507,
+      "customers": 5768
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "trips": 11694,
+      "avg_duration": 23.128900860840314,
+      "subscribers": 9404,
+      "customers": 2290
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "trips": 11624,
+      "avg_duration": 16.41900952053223,
+      "subscribers": 9648,
+      "customers": 1976
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "trips": 4881,
+      "avg_duration": 60.078361674520245,
+      "subscribers": 3951,
+      "customers": 930
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "trips": 17123,
+      "avg_duration": 23.403195507017852,
+      "subscribers": 11992,
+      "customers": 5131
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "trips": 23774,
+      "avg_duration": 24.4417816382042,
+      "subscribers": 16304,
+      "customers": 7470
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "trips": 45043,
+      "avg_duration": 21.972593595749245,
+      "subscribers": 23720,
+      "customers": 21323
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "trips": 71442,
+      "avg_duration": 31.55464875936657,
+      "subscribers": 40325,
+      "customers": 31117
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "trips": 82578,
+      "avg_duration": 23.674001751879032,
+      "subscribers": 44580,
+      "customers": 37998
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "trips": 93821,
+      "avg_duration": 20.212655482248113,
+      "subscribers": 51335,
+      "customers": 42486
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "trips": 97313,
+      "avg_duration": 19.52355012519739,
+      "subscribers": 54948,
+      "customers": 42365
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "trips": 88762,
+      "avg_duration": 18.732110775632215,
+      "subscribers": 54202,
+      "customers": 34560
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "trips": 60061,
+      "avg_duration": 19.57002491911002,
+      "subscribers": 40034,
+      "customers": 20027
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "trips": 48021,
+      "avg_duration": 19.21021324004082,
+      "subscribers": 32975,
+      "customers": 15046
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "trips": 26762,
+      "avg_duration": 24.595188451286653,
+      "subscribers": 20031,
+      "customers": 6731
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "trips": 31911,
+      "avg_duration": 15.679790145508862,
+      "subscribers": 23499,
+      "customers": 8412
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "trips": 51671,
+      "avg_duration": 15.011016172837117,
+      "subscribers": 35937,
+      "customers": 15734
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "trips": 62528,
+      "avg_duration": 17.44963589645172,
+      "subscribers": 40487,
+      "customers": 22041
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "trips": 80482,
+      "avg_duration": 19.692982488838084,
+      "subscribers": 51933,
+      "customers": 28549
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "trips": 103299,
+      "avg_duration": 20.971901147800722,
+      "subscribers": 63047,
+      "customers": 40252
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "trips": 115231,
+      "avg_duration": 17.511155707520835,
+      "subscribers": 71633,
+      "customers": 43598
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "trips": 104247,
+      "avg_duration": 16.604006829932754,
+      "subscribers": 66985,
+      "customers": 37262
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "trips": 89558,
+      "avg_duration": 15.085548471381674,
+      "subscribers": 61213,
+      "customers": 28345
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "trips": 72709,
+      "avg_duration": 12.882108588116097,
+      "subscribers": 52545,
+      "customers": 20164
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "trips": 48585,
+      "avg_duration": 12.383924736715722,
+      "subscribers": 36738,
+      "customers": 11847
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "trips": 56075,
+      "avg_duration": 11.793659681973546,
+      "subscribers": 43642,
+      "customers": 12433
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "trips": 51213,
+      "avg_duration": 10.231531707444073,
+      "subscribers": 41074,
+      "customers": 10139
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "trips": 63072,
+      "avg_duration": 10.803920651530525,
+      "subscribers": 49301,
+      "customers": 13771
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "trips": 80688,
+      "avg_duration": 13.028298920946526,
+      "subscribers": 58438,
+      "customers": 22250
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "trips": 96002,
+      "avg_duration": 15.26741248446213,
+      "subscribers": 69222,
+      "customers": 26780
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "trips": 97023,
+      "avg_duration": 13.942111492463987,
+      "subscribers": 68948,
+      "customers": 28075
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "trips": 106608,
+      "avg_duration": 14.099787070388714,
+      "subscribers": 73344,
+      "customers": 33264
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "trips": 112027,
+      "avg_duration": 12.935850137318086,
+      "subscribers": 79552,
+      "customers": 32475
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "trips": 94233,
+      "avg_duration": 12.485450779804669,
+      "subscribers": 68869,
+      "customers": 25364
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "trips": 97584,
+      "avg_duration": 12.11296489861726,
+      "subscribers": 73863,
+      "customers": 23721
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "trips": 75646,
+      "avg_duration": 9.717686769073492,
+      "subscribers": 59514,
+      "customers": 16132
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "trips": 58680,
+      "avg_duration": 9.733786923426495,
+      "subscribers": 46016,
+      "customers": 12664
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "trips": 1000000,
+      "avg_duration": 12.035278724233331,
+      "subscribers": 876937,
+      "customers": 123063
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "trips": 50661,
+      "avg_duration": 8.603275695308026,
+      "subscribers": 42743,
+      "customers": 7918
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "trips": 888085,
+      "avg_duration": 10.931183573306612,
+      "subscribers": 802899,
+      "customers": 85186
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "trips": 1000000,
+      "avg_duration": 11.404660873666664,
+      "subscribers": 886942,
+      "customers": 113058
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "trips": 121501,
+      "avg_duration": 10.793369470210118,
+      "subscribers": 107668,
+      "customers": 13833
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "trips": 55613,
+      "avg_duration": 8.620548253106287,
+      "subscribers": 46664,
+      "customers": 8949
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "trips": 1000000,
+      "avg_duration": 12.001731555866668,
+      "subscribers": 873852,
+      "customers": 126148
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "trips": 663295,
+      "avg_duration": 12.479842145576251,
+      "subscribers": 548893,
+      "customers": 114402
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 13.14780053775,
+      "subscribers": 837343,
+      "customers": 162657
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 13.151264979200006,
+      "subscribers": 853717,
+      "customers": 146283
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "trips": 65581,
+      "avg_duration": 10.414406357532416,
+      "subscribers": 51908,
+      "customers": 13673
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 13.403832378600004,
+      "subscribers": 802250,
+      "customers": 197750
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 14.502412532866668,
+      "subscribers": 809749,
+      "customers": 190251
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "trips": 79116,
+      "avg_duration": 10.82628924617018,
+      "subscribers": 60137,
+      "customers": 18979
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "trips": 217063,
+      "avg_duration": 13.639171257730089,
+      "subscribers": 174995,
+      "customers": 42068
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 13.104555187050002,
+      "subscribers": 832959,
+      "customers": 167041
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 13.3747166527,
+      "subscribers": 803421,
+      "customers": 196579
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 14.348187935416668,
+      "subscribers": 784899,
+      "customers": 215101
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 97479,
+      "avg_duration": 11.74041827812486,
+      "subscribers": 72342,
+      "customers": 25137
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 15.64506556243333,
+      "subscribers": 778275,
+      "customers": 221725
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 133961,
+      "avg_duration": 13.421750058599141,
+      "subscribers": 107214,
+      "customers": 26747
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 14.416178255600004,
+      "subscribers": 803656,
+      "customers": 196344
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 16.12954996055,
+      "subscribers": 773030,
+      "customers": 226970
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 783576,
+      "avg_duration": 13.84311526695135,
+      "subscribers": 605200,
+      "customers": 178376
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 16.237965446550007,
+      "subscribers": 752353,
+      "customers": 247647
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 111115,
+      "avg_duration": 12.87733720259791,
+      "subscribers": 78655,
+      "customers": 32460
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 14.162859361699992,
+      "subscribers": 761400,
+      "customers": 238600
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 14.105354766333333,
+      "subscribers": 775807,
+      "customers": 224193
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 14.14394970936667,
+      "subscribers": 760179,
+      "customers": 239821
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 15.42591607645,
+      "subscribers": 772062,
+      "customers": 227938
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 112443,
+      "avg_duration": 12.114216426841454,
+      "subscribers": 80104,
+      "customers": 32339
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 15.7446968685,
+      "subscribers": 759490,
+      "customers": 240510
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 722896,
+      "avg_duration": 13.48767770818117,
+      "subscribers": 563340,
+      "customers": 159556
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 13.651866619283334,
+      "subscribers": 777149,
+      "customers": 222851
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 13.897480550883333,
+      "subscribers": 771034,
+      "customers": 228966
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 15.793573627366667,
+      "subscribers": 763334,
+      "customers": 236666
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 106451,
+      "avg_duration": 11.535013513416187,
+      "subscribers": 77575,
+      "customers": 28876
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 15.318470575933334,
+      "subscribers": 772437,
+      "customers": 227563
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 603575,
+      "avg_duration": 13.681878353780949,
+      "subscribers": 462931,
+      "customers": 140644
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "trips": 1000000,
+      "avg_duration": 13.962090375516663,
+      "subscribers": 766650,
+      "customers": 233350
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 14.907060400633334,
+      "subscribers": 780240,
+      "customers": 219760
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 997898,
+      "avg_duration": 14.374891913969831,
+      "subscribers": 795034,
+      "customers": 202864
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 13.308342700883326,
+      "subscribers": 791488,
+      "customers": 208512
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 12.741522599133333,
+      "subscribers": 805556,
+      "customers": 194444
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 1000000,
+      "avg_duration": 14.161325493800003,
+      "subscribers": 782570,
+      "customers": 217430
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "trips": 115558,
+      "avg_duration": 10.513264537865547,
+      "subscribers": 85280,
+      "customers": 30278
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 13.755839118549995,
+      "subscribers": 799634,
+      "customers": 200366
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 150054,
+      "avg_duration": 12.445115582945695,
+      "subscribers": 122950,
+      "customers": 27104
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 13.013815386499994,
+      "subscribers": 812143,
+      "customers": 187857
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 12.664877781316665,
+      "subscribers": 818374,
+      "customers": 181626
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 118307,
+      "avg_duration": 9.731638488283307,
+      "subscribers": 89655,
+      "customers": 28652
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 13.06302573608334,
+      "subscribers": 793903,
+      "customers": 206097
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "trips": 1000000,
+      "avg_duration": 13.482859237033333,
+      "subscribers": 814842,
+      "customers": 185158
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 13.19951571485,
+      "subscribers": 820977,
+      "customers": 179023
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 12.085848739383335,
+      "subscribers": 829579,
+      "customers": 170421
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "trips": 85294,
+      "avg_duration": 8.950191558609047,
+      "subscribers": 67033,
+      "customers": 18261
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "trips": 710134,
+      "avg_duration": 11.377881798317876,
+      "subscribers": 598287,
+      "customers": 111847
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "trips": 1000000,
+      "avg_duration": 11.868886501033336,
+      "subscribers": 840131,
+      "customers": 159869
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "trips": 311171,
+      "avg_duration": 10.480922703968771,
+      "subscribers": 268765,
+      "customers": 42406
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "trips": 54833,
+      "avg_duration": 8.183274303491208,
+      "subscribers": 45184,
+      "customers": 9649
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "trips": 1000000,
+      "avg_duration": 11.046138033366667,
+      "subscribers": 864533,
+      "customers": 135467
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "trips": 1000000,
+      "avg_duration": 10.4087797702,
+      "subscribers": 885207,
+      "customers": 114793
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "trips": 1000000,
+      "avg_duration": 9.611740446733334,
+      "subscribers": 911861,
+      "customers": 88139
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "trips": 50611,
+      "avg_duration": 7.596198147306581,
+      "subscribers": 43880,
+      "customers": 6731
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "trips": 124475,
+      "avg_duration": 9.678304648322957,
+      "subscribers": 113449,
+      "customers": 11026
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "trips": 1000000,
+      "avg_duration": 9.940171418799997,
+      "subscribers": 897306,
+      "customers": 102694
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "trips": 1000000,
+      "avg_duration": 10.028970650533333,
+      "subscribers": 911075,
+      "customers": 88925
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "trips": 31257,
+      "avg_duration": 11.578713328747693,
+      "subscribers": 27927,
+      "customers": 3330
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "trips": 45255,
+      "avg_duration": 7.650381548263543,
+      "subscribers": 39342,
+      "customers": 5913
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "trips": 1000000,
+      "avg_duration": 10.250248406999997,
+      "subscribers": 899496,
+      "customers": 100504
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 10.847770257516668,
+      "subscribers": 873762,
+      "customers": 126238
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "trips": 73293,
+      "avg_duration": 8.59771750508234,
+      "subscribers": 59814,
+      "customers": 13479
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "trips": 168271,
+      "avg_duration": 11.720985810884427,
+      "subscribers": 142534,
+      "customers": 25737
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 12.563440252350004,
+      "subscribers": 857496,
+      "customers": 142504
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "trips": 1000000,
+      "avg_duration": 11.630375694466666,
+      "subscribers": 846765,
+      "customers": 153235
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "trips": 81553,
+      "avg_duration": 9.734359695944148,
+      "subscribers": 64130,
+      "customers": 17423
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 11.448002155716658,
+      "subscribers": 867447,
+      "customers": 132553
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 12.024870088333335,
+      "subscribers": 837672,
+      "customers": 162328
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "trips": 724596,
+      "avg_duration": 12.968778354742966,
+      "subscribers": 590261,
+      "customers": 134335
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "trips": 1000000,
+      "avg_duration": 13.752285322216673,
+      "subscribers": 813848,
+      "customers": 186152
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 13.747284959583332,
+      "subscribers": 809828,
+      "customers": 190172
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 93227,
+      "avg_duration": 10.665967549458133,
+      "subscribers": 69858,
+      "customers": 23369
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 14.152299732166666,
+      "subscribers": 797093,
+      "customers": 202907
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 325553,
+      "avg_duration": 13.070086683581472,
+      "subscribers": 259678,
+      "customers": 65875
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 12.931017452899992,
+      "subscribers": 813823,
+      "customers": 186177
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "trips": 1000000,
+      "avg_duration": 12.830253612283334,
+      "subscribers": 803503,
+      "customers": 196497
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 13.022086218116668,
+      "subscribers": 796336,
+      "customers": 203664
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 12.93323808303333,
+      "subscribers": 806210,
+      "customers": 193790
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 759345,
+      "avg_duration": 15.155344376008264,
+      "subscribers": 603886,
+      "customers": 155459
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 13.143314632800001,
+      "subscribers": 792566,
+      "customers": 207434
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 97124,
+      "avg_duration": 11.14771969629889,
+      "subscribers": 72766,
+      "customers": 24358
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "trips": 1000000,
+      "avg_duration": 14.285873653883332,
+      "subscribers": 808472,
+      "customers": 191528
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 988053,
+      "avg_duration": 13.162485344713291,
+      "subscribers": 795035,
+      "customers": 193018
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 13.62719587428334,
+      "subscribers": 789107,
+      "customers": 210893
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 15.375022161483338,
+      "subscribers": 795123,
+      "customers": 204877
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 13.458224657966666,
+      "subscribers": 778861,
+      "customers": 221139
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 1000000,
+      "avg_duration": 15.636864755966664,
+      "subscribers": 774626,
+      "customers": 225374
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "trips": 107726,
+      "avg_duration": 11.13262404526298,
+      "subscribers": 79564,
+      "customers": 28162
+    }
+  ],
+  "summary": {
+    "total_trips_all_time": 189649565,
+    "years_active": 13,
+    "peak_year": "2024",
+    "total_co2_saved": 202545735.41999996
+  }
+}
