@@ -1099,8 +1099,8 @@
             const tooltip = document.getElementById('tooltip');
             tooltip.innerHTML = text;
             tooltip.style.opacity = 1;
-            tooltip.style.left = (event.pageX + 10) + 'px';
-            tooltip.style.top = (event.pageY - 10) + 'px';
+            tooltip.style.left = (event.pageX + 15) + 'px';
+            tooltip.style.top = (event.pageY - 60) + 'px';
         }
 
         function hideTooltip() {
@@ -1942,7 +1942,7 @@
             const amGroup = svg.append('g').attr('transform', `translate(${centerX},${amCenterY})`);
             
             amGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
-            amGroup.append('text').attr('x', 0).attr('y', -radius - 25).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('AM');
+            amGroup.append('text').attr('x', 0).attr('y', -radius - 40).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('AM');
             
             // AM hour markers and slices
             amData.forEach((d, i) => {
@@ -1960,7 +1960,7 @@
                 amGroup.append('text').attr('x', labelX).attr('y', labelY).attr('text-anchor', 'middle').attr('dy', '0.35em').style('font-size', '11px').style('font-weight', 'bold').style('fill', '#333').text(d.displayHour);
                 
                 setTimeout(() => {
-                    const arc = d3.arc().innerRadius(0).outerRadius(radius).startAngle((d.displayHour * 30 - 90 - 15) * Math.PI / 180).endAngle((d.displayHour * 30 - 90 + 15) * Math.PI / 180);
+                    const arc = d3.arc().innerRadius(0).outerRadius(radius).startAngle((d.displayHour * 30 - 15) * Math.PI / 180).endAngle((d.displayHour * 30 + 15) * Math.PI / 180);
                     
                     amGroup.append('path')
                         .datum(d)
@@ -1971,7 +1971,8 @@
                         .style('opacity', 0)
                         .on('mouseover', function(event, d) {
                             const displayHour = d.hour === 0 ? 12 : d.hour;
-                            showTooltip(event, `${displayHour}:00 AM - ${Math.round(d.rides/1000)}k rides`);
+                            const percentage = ((d.rides / maxRides) * 100).toFixed(1);
+                            showTooltip(event, `${displayHour}:00 AM<br/>${Math.round(d.rides/1000)}k rides<br/>${percentage}% of peak`);
                         })
                         .on('mouseout', hideTooltip)
                         .transition()
@@ -1985,7 +1986,7 @@
             const pmGroup = svg.append('g').attr('transform', `translate(${centerX},${pmCenterY})`);
             
             pmGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
-            pmGroup.append('text').attr('x', 0).attr('y', radius + 35).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('PM');
+            pmGroup.append('text').attr('x', 0).attr('y', radius + 50).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('PM');
             
             // PM hour markers and slices
             pmData.forEach((d, i) => {
@@ -2003,7 +2004,7 @@
                 pmGroup.append('text').attr('x', labelX).attr('y', labelY).attr('text-anchor', 'middle').attr('dy', '0.35em').style('font-size', '11px').style('font-weight', 'bold').style('fill', '#333').text(d.displayHour);
                 
                 setTimeout(() => {
-                    const arc = d3.arc().innerRadius(0).outerRadius(radius).startAngle((d.displayHour * 30 - 90 - 15) * Math.PI / 180).endAngle((d.displayHour * 30 - 90 + 15) * Math.PI / 180);
+                    const arc = d3.arc().innerRadius(0).outerRadius(radius).startAngle((d.displayHour * 30 - 15) * Math.PI / 180).endAngle((d.displayHour * 30 + 15) * Math.PI / 180);
                     
                     pmGroup.append('path')
                         .datum(d)
@@ -2014,7 +2015,8 @@
                         .style('opacity', 0)
                         .on('mouseover', function(event, d) {
                             const displayHour = d.hour === 12 ? 12 : d.hour - 12;
-                            showTooltip(event, `${displayHour}:00 PM - ${Math.round(d.rides/1000)}k rides`);
+                            const percentage = ((d.rides / maxRides) * 100).toFixed(1);
+                            showTooltip(event, `${displayHour}:00 PM<br/>${Math.round(d.rides/1000)}k rides<br/>${percentage}% of peak`);
                         })
                         .on('mouseout', hideTooltip)
                         .transition()
@@ -2033,15 +2035,15 @@
             setTimeout(() => {
                 // 8AM callout (right side of AM clock)
                 const am8Angle = (8 * 30 - 90) * Math.PI / 180;
-                const am8X = centerX + Math.cos(am8Angle) * (radius + 45);
-                const am8Y = amCenterY + Math.sin(am8Angle) * (radius + 45);
+                const am8X = centerX + Math.cos(am8Angle) * (radius + 45) - 109;
+                const am8Y = amCenterY + Math.sin(am8Angle) * (radius + 45) + 36;
                 
                 const am8Group = svg.append('g');
                 am8Group.append('rect')
-                    .attr('x', am8X - 35)
-                    .attr('y', am8Y - 12)
-                    .attr('width', 70)
-                    .attr('height', 24)
+                    .attr('x', am8X - 140)
+                    .attr('y', am8Y - 35)
+                    .attr('width', 280)
+                    .attr('height', 70)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#d73027')
                     .attr('stroke-width', 2)
@@ -2049,32 +2051,40 @@
                 
                 am8Group.append('text')
                     .attr('x', am8X)
-                    .attr('y', am8Y - 2)
+                    .attr('y', am8Y - 8)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '10px')
+                    .style('font-size', '14px')
                     .style('font-weight', 'bold')
                     .style('fill', '#d73027')
-                    .text('8AM Rush');
+                    .text('Morning Commute Peak');
                 
                 am8Group.append('text')
                     .attr('x', am8X)
-                    .attr('y', am8Y + 8)
+                    .attr('y', am8Y + 6)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '8px')
+                    .style('font-size', '12px')
                     .style('fill', '#333')
                     .text('15k rides/hour');
                 
+                am8Group.append('text')
+                    .attr('x', am8X)
+                    .attr('y', am8Y + 22)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '11px')
+                    .style('fill', '#666')
+                    .text('Office workers choose bikes over crowded subways.');
+                
                 // 6PM callout (bottom of PM clock)
                 const pm6Angle = (6 * 30 - 90) * Math.PI / 180;
-                const pm6X = centerX + Math.cos(pm6Angle) * (radius + 45);
-                const pm6Y = pmCenterY + Math.sin(pm6Angle) * (radius + 45);
+                const pm6X = centerX + Math.cos(pm6Angle) * (radius + 45) + 188;
+                const pm6Y = pmCenterY + Math.sin(pm6Angle) * (radius + 45) + 8;
                 
                 const pm6Group = svg.append('g');
                 pm6Group.append('rect')
-                    .attr('x', pm6X - 35)
-                    .attr('y', pm6Y - 12)
-                    .attr('width', 70)
-                    .attr('height', 24)
+                    .attr('x', pm6X - 120)
+                    .attr('y', pm6Y - 35)
+                    .attr('width', 240)
+                    .attr('height', 70)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#d73027')
                     .attr('stroke-width', 2)
@@ -2082,20 +2092,110 @@
                 
                 pm6Group.append('text')
                     .attr('x', pm6X)
-                    .attr('y', pm6Y - 2)
+                    .attr('y', pm6Y - 8)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '10px')
+                    .style('font-size', '14px')
                     .style('font-weight', 'bold')
                     .style('fill', '#d73027')
-                    .text('6PM Rush');
+                    .text('Evening Rush Peak');
                 
                 pm6Group.append('text')
                     .attr('x', pm6X)
-                    .attr('y', pm6Y + 8)
+                    .attr('y', pm6Y + 6)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '8px')
+                    .style('font-size', '12px')
                     .style('fill', '#333')
                     .text('16k rides/hour');
+                
+                pm6Group.append('text')
+                    .attr('x', pm6X)
+                    .attr('y', pm6Y + 22)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '11px')
+                    .style('fill', '#666')
+                    .text('Evening exodus creates the day\'s busiest hour.');
+                
+                // 10AM callout (weekend leisure)
+                const am10Angle = (10 * 30 - 90) * Math.PI / 180;
+                const am10X = centerX + Math.cos(am10Angle) * (radius + 45) - 100;
+                const am10Y = amCenterY + Math.sin(am10Angle) * (radius + 45) - 72;
+                
+                const am10Group = svg.append('g');
+                am10Group.append('rect')
+                    .attr('x', am10X - 140)
+                    .attr('y', am10Y - 35)
+                    .attr('width', 280)
+                    .attr('height', 70)
+                    .attr('fill', 'rgba(255,255,255,0.95)')
+                    .attr('stroke', '#9b59b6')
+                    .attr('stroke-width', 2)
+                    .attr('rx', 6);
+                
+                am10Group.append('text')
+                    .attr('x', am10X)
+                    .attr('y', am10Y - 8)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '14px')
+                    .style('font-weight', 'bold')
+                    .style('fill', '#9b59b6')
+                    .text('Weekend Explorer');
+                
+                am10Group.append('text')
+                    .attr('x', am10X)
+                    .attr('y', am10Y + 6)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '12px')
+                    .style('fill', '#333')
+                    .text('6k rides/hour');
+                
+                am10Group.append('text')
+                    .attr('x', am10X)
+                    .attr('y', am10Y + 22)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '11px')
+                    .style('fill', '#666')
+                    .text('Weekend adventurers discover NYC neighborhoods.');
+                
+                // 1PM callout (lunch hour)
+                const pm1Angle = (1 * 30 - 90) * Math.PI / 180;
+                const pm1X = centerX + Math.cos(pm1Angle) * (radius + 45) + 144;
+                const pm1Y = pmCenterY + Math.sin(pm1Angle) * (radius + 45);
+                
+                const pm1Group = svg.append('g');
+                pm1Group.append('rect')
+                    .attr('x', pm1X - 120)
+                    .attr('y', pm1Y - 35)
+                    .attr('width', 240)
+                    .attr('height', 70)
+                    .attr('fill', 'rgba(255,255,255,0.95)')
+                    .attr('stroke', '#f39c12')
+                    .attr('stroke-width', 2)
+                    .attr('rx', 6);
+                
+                pm1Group.append('text')
+                    .attr('x', pm1X)
+                    .attr('y', pm1Y - 8)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '14px')
+                    .style('font-weight', 'bold')
+                    .style('fill', '#f39c12')
+                    .text('Midday Business');
+                
+                pm1Group.append('text')
+                    .attr('x', pm1X)
+                    .attr('y', pm1Y + 6)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '12px')
+                    .style('fill', '#333')
+                    .text('7k rides/hour');
+                
+                pm1Group.append('text')
+                    .attr('x', pm1X)
+                    .attr('y', pm1Y + 22)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', '11px')
+                    .style('fill', '#666')
+                    .text('Lunch meetings and errands fuel steady usage.');
                     
             }, 2500);
             
