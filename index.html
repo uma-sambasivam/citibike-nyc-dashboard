@@ -2201,17 +2201,17 @@
             
             // Add legend
             setTimeout(() => {
-                const legend = svg.append('g').attr('transform', `translate(${width - 100}, 20)`);
-                legend.append('text').attr('x', 0).attr('y', 0).style('font-size', '10px').style('font-weight', 'bold').style('fill', '#333').text('Rides/Hour');
+                const legend = svg.append('g').attr('transform', `translate(${width - 160}, 20)`);
+                legend.append('text').attr('x', 0).attr('y', 0).style('font-size', '14px').style('font-weight', 'bold').style('fill', '#333').text('Rides/Hour');
                 
                 const gradient = svg.append('defs').append('linearGradient').attr('id', 'legend-gradient').attr('x1', '0%').attr('x2', '100%').attr('y1', '0%').attr('y2', '0%');
                 gradient.selectAll('stop').data(d3.range(0, 1.1, 0.2)).enter().append('stop').attr('offset', d => d * 100 + '%').attr('stop-color', d => d3.interpolateReds(d));
                 
-                legend.append('rect').attr('x', 0).attr('y', 8).attr('width', 60).attr('height', 8).attr('fill', 'url(#legend-gradient)');
+                legend.append('rect').attr('x', 0).attr('y', 8).attr('width', 140).attr('height', 12).attr('fill', 'url(#legend-gradient)');
                 
-                const legendScale = d3.scaleLinear().domain([0, maxRides]).range([0, 60]);
-                const legendAxis = d3.axisBottom(legendScale).ticks(2).tickFormat(d => Math.round(d/1000) + 'k');
-                legend.append('g').attr('transform', 'translate(0, 20)').call(legendAxis).selectAll('text').style('font-size', '8px');
+                const legendScale = d3.scaleLinear().domain([0, maxRides]).range([0, 140]);
+                const legendAxis = d3.axisBottom(legendScale).ticks(3).tickFormat(d => Math.round(d/1000) + 'k');
+                legend.append('g').attr('transform', 'translate(0, 24)').call(legendAxis).selectAll('text').style('font-size', '12px');
             }, 3000);
         }
 
