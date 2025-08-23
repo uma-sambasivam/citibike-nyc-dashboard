@@ -1942,7 +1942,7 @@
             const amGroup = svg.append('g').attr('transform', `translate(${centerX},${amCenterY})`);
             
             amGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
-            amGroup.append('text').attr('x', -radius - 40).attr('y', 5).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('AM');
+            amGroup.append('text').attr('x', 0).attr('y', -radius - 25).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('AM');
             
             // AM hour markers and slices
             amData.forEach((d, i) => {
@@ -1970,8 +1970,8 @@
                         .attr('stroke-width', 1)
                         .style('opacity', 0)
                         .on('mouseover', function(event, d) {
-                            const hourStr = d.hour.toString().padStart(2, '0');
-                            showTooltip(event, `${hourStr}:00 - ${Math.round(d.rides/1000)}k rides`);
+                            const displayHour = d.hour === 0 ? 12 : d.hour;
+                            showTooltip(event, `${displayHour}:00 AM - ${Math.round(d.rides/1000)}k rides`);
                         })
                         .on('mouseout', hideTooltip)
                         .transition()
@@ -1985,7 +1985,7 @@
             const pmGroup = svg.append('g').attr('transform', `translate(${centerX},${pmCenterY})`);
             
             pmGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
-            pmGroup.append('text').attr('x', -radius - 40).attr('y', 5).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('PM');
+            pmGroup.append('text').attr('x', 0).attr('y', radius + 35).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('PM');
             
             // PM hour markers and slices
             pmData.forEach((d, i) => {
@@ -2013,8 +2013,8 @@
                         .attr('stroke-width', 1)
                         .style('opacity', 0)
                         .on('mouseover', function(event, d) {
-                            const hourStr = d.hour.toString().padStart(2, '0');
-                            showTooltip(event, `${hourStr}:00 - ${Math.round(d.rides/1000)}k rides`);
+                            const displayHour = d.hour === 12 ? 12 : d.hour - 12;
+                            showTooltip(event, `${displayHour}:00 PM - ${Math.round(d.rides/1000)}k rides`);
                         })
                         .on('mouseout', hideTooltip)
                         .transition()
