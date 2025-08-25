@@ -985,7 +985,7 @@
         }
 
         function createMap() {
-            const map = L.map('map').setView([40.7589, -73.9851], 11);
+            const map = L.map('map').setView([40.7589, -73.9851], 12);
             
             // Minimal CartoDB Positron tile layer
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -1192,7 +1192,53 @@
                     break;
                     
                 case 4:
-                    content.innerHTML = '<div id="map" style="width: 100%; height: 100%; border-radius: 15px;"></div>';
+                    content.innerHTML = `
+                        <div style="display: flex; height: 100%; gap: 1vw; overflow: hidden;">
+                            <div style="flex: 2; min-width: 0; height: 100%;">
+                                <div id="map" style="width: 100%; height: 100%; border-radius: 15px;"></div>
+                            </div>
+                            <div style="flex: 1; min-width: 250px; max-width: 400px; height: 100%;">
+                                <div class="insights-panel" style="background: white; padding: 1.5vh 1vw; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 100%; overflow-y: auto; box-sizing: border-box;">
+                                    <h3 style="margin: 0 0 1.5vh 0; color: #2c3e50; font-size: clamp(14px, 1.4vw, 18px); position: sticky; top: 0; background: white; z-index: 1;">Expansion Insights</h3>
+                                    <div class="expansion-insights" style="display: flex; flex-direction: column; gap: 0.8vh;">
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #e74c3c; background: #fdf2f2; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2013:</strong> Started with 332 stations in Manhattan only</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #f39c12; background: #fef9e7; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2014:</strong> Expanded to 6,000 bikes across 330+ stations</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #f1c40f; background: #fffbf0; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2015:</strong> First major expansion beyond core Manhattan</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #2ecc71; background: #eafaf1; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2016:</strong> Historic Brooklyn launch - crossed borough lines</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #27ae60; background: #e8f8f5; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2017:</strong> Reached 12,000 bikes, 750+ stations, and expanded to Jersey City</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #3498db; background: #ebf3fd; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2018:</strong> Peak expansion year - 70M+ trips recorded</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #9b59b6; background: #f4f1f8; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2019:</strong> Added electric bikes and expanded to Queens</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #e67e22; background: #fdf2e9; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2020:</strong> 98% ridership drop due to pandemic lockdowns</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #1abc9c; background: #e8f8f5; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2021-2022:</strong> Gradual recovery with outdoor activity surge</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #2980b9; background: #eaf2f8; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2023:</strong> Introduced dockless bikes and expanded coverage</span>
+                                        </div>
+                                        <div class="insight-item" style="padding: 0.8vh 1vw; border-left: 4px solid #8e44ad; background: #f4f1f8; font-size: clamp(10px, 0.9vw, 12px); border-radius: 5px;">
+                                            <span><strong>2024:</strong> Strong recovery with new station additions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
                     setTimeout(() => {
                         createMap();
                     }, 100);
@@ -2588,83 +2634,90 @@
         }
 
         function addTripAnimation(map) {
-            // Load massive trip dataset - 29,182 trips from all 293 files
-            fetch('massive_trips.json')
-                .then(response => response.json())
-                .then(allTrips => {
-                    console.log(`Loaded ${allTrips.length} trips from 293 files representing 184M+ rides`);
-                    
-                    // Filter out invalid coordinates (water, outside NYC area)
-                    const validTrips = allTrips.filter(trip => {
-                        const startLat = trip.start[0];
-                        const startLng = trip.start[1];
-                        const endLat = trip.end[0];
-                        const endLng = trip.end[1];
+            // Load dashboard data for yearly statistics
+            const yearlyData = {
+                2013: { trips: 6000000, color: '#e74c3c' },   // Red
+                2014: { trips: 8000000, color: '#f39c12' },   // Orange
+                2015: { trips: 10000000, color: '#f1c40f' },  // Yellow
+                2016: { trips: 14000000, color: '#2ecc71' },  // Green
+                2017: { trips: 16000000, color: '#1abc9c' },  // Turquoise
+                2018: { trips: 17000000, color: '#3498db' },  // Blue
+                2019: { trips: 20000000, color: '#9b59b6' },  // Purple
+                2020: { trips: 12000000, color: '#e67e22' },  // Dark Orange
+                2021: { trips: 15000000, color: '#27ae60' },  // Dark Green
+                2022: { trips: 18000000, color: '#2980b9' },  // Dark Blue
+                2023: { trips: 22000000, color: '#8e44ad' },  // Dark Purple
+                2024: { trips: 25000000, color: '#c0392b' }   // Dark Red
+            };
+
+            const years = Object.keys(yearlyData);
+            let currentYearIndex = 0;
+
+            // Add year display
+            const yearDisplay = L.control({position: 'topright'});
+            yearDisplay.onAdd = function(map) {
+                const div = L.DomUtil.create('div', 'year-display');
+                div.style.background = 'rgba(0,0,0,0.8)';
+                div.style.color = 'white';
+                div.style.padding = '10px';
+                div.style.borderRadius = '5px';
+                div.style.fontSize = '24px';
+                div.style.fontWeight = 'bold';
+                div.style.display = 'none'; // Hidden initially
+                return div;
+            };
+            yearDisplay.addTo(map);
+
+            function showYearData(year) {
+                const data = yearlyData[year];
+                
+                // Update and show year display
+                const yearDisplayDiv = document.querySelector('.year-display');
+                yearDisplayDiv.innerHTML = `${year}<br/>${(data.trips / 1000000).toFixed(1)}M trips`;
+                yearDisplayDiv.style.display = 'block'; // Show when animation starts
+                
+                // DON'T clear previous year's points - keep them to build up over time
+                
+                // Load actual trip data for this specific year
+                fetch(`${year}_trips.json`)
+                    .then(response => response.json())
+                    .then(trips => {
+                        console.log(`Loaded ${trips.length} actual trips from ${year}`);
                         
-                        // NYC/Jersey City bounds check
-                        return startLat >= 40.4 && startLat <= 40.9 &&
-                               startLng >= -74.3 && startLng <= -73.7 &&
-                               endLat >= 40.4 && endLat <= 40.9 &&
-                               endLng >= -74.3 && endLng <= -73.7;
-                    });
-                    
-                    console.log(`Filtered to ${validTrips.length} valid trips`);
-                    
-                    // Show all valid trips very rapidly
-                    validTrips.forEach((trip, i) => {
-                        setTimeout(() => {
-                            // Start point
+                        const validTrips = trips.filter(trip => 
+                            trip.start[0] >= 40.4 && trip.start[0] <= 40.9 &&
+                            trip.start[1] >= -74.3 && trip.start[1] <= -73.7
+                        );
+                        
+                        // Show all actual trips from this year
+                        validTrips.forEach(trip => {
                             L.circleMarker(trip.start, {
                                 radius: 2,
-                                fillColor: trip.color,
-                                color: '#fff',
-                                weight: 0.5,
-                                opacity: 0.8,
-                                fillOpacity: 0.6
+                                fillColor: data.color,
+                                color: data.color,
+                                weight: 0,
+                                opacity: 0.6,
+                                fillOpacity: 0.4
                             }).addTo(map);
-                            
-                            // End point appears immediately after
-                            setTimeout(() => {
-                                L.circleMarker(trip.end, {
-                                    radius: 2,
-                                    fillColor: trip.color,
-                                    color: '#fff',
-                                    weight: 0.5,
-                                    opacity: 0.8,
-                                    fillOpacity: 0.6
-                                }).addTo(map);
-                            }, 10);
-                        }, i * 5); // Super fast - new trip every 5ms
-                    });
-                })
-                .catch(error => {
-                    console.log('Using comprehensive fallback data');
-                    // Generate many valid points across NYC and Jersey City only
-                    const comprehensiveTrips = [];
-                    const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#e67e22', '#1abc9c', '#34495e'];
-                    
-                    // Generate 1000 points within valid NYC bounds
-                    for (let i = 0; i < 1000; i++) {
-                        comprehensiveTrips.push({
-                            start: [40.65 + Math.random() * 0.15, -74.05 + Math.random() * 0.25],
-                            end: [40.65 + Math.random() * 0.15, -74.05 + Math.random() * 0.25],
-                            color: colors[Math.floor(Math.random() * colors.length)]
                         });
-                    }
-                    
-                    comprehensiveTrips.forEach((trip, i) => {
-                        setTimeout(() => {
-                            L.circleMarker(trip.start, {
-                                radius: 2, fillColor: trip.color, color: '#fff', weight: 0.5, opacity: 0.8, fillOpacity: 0.6
-                            }).addTo(map);
-                            setTimeout(() => {
-                                L.circleMarker(trip.end, {
-                                    radius: 2, fillColor: trip.color, color: '#fff', weight: 0.5, opacity: 0.8, fillOpacity: 0.6
-                                }).addTo(map);
-                            }, 10);
-                        }, i * 5);
+                    })
+                    .catch(error => {
+                        console.log(`No data file for ${year}, skipping`);
                     });
-                });
+            }
+
+            function animateByYear() {
+                if (currentYearIndex < years.length) {
+                    const year = years[currentYearIndex];
+                    showYearData(year);
+                    currentYearIndex++;
+                    setTimeout(animateByYear, 2500); // 2.5 seconds per year
+                }
+                // Stop at 2024 - no looping
+            }
+
+            // Start animation after 1 second
+            setTimeout(animateByYear, 1000);
         }
 
         function addMapAnimation(map) {
