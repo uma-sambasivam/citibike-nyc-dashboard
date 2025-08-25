@@ -2588,83 +2588,69 @@
         }
 
         function addTripAnimation(map) {
-            // Load massive trip dataset - 29,182 trips from all 293 files
-            fetch('massive_trips.json')
-                .then(response => response.json())
-                .then(allTrips => {
-                    console.log(`Loaded ${allTrips.length} trips from 293 files representing 184M+ rides`);
+            // Animate trips by year - show all trips for each year at once
+            const yearlyTrips = {
+                2013: { count: 6000, color: '#3498db' },
+                2014: { count: 8000, color: '#2980b9' },
+                2015: { count: 10000, color: '#1abc9c' },
+                2016: { count: 14000, color: '#16a085' },
+                2017: { count: 16000, color: '#27ae60' },
+                2018: { count: 17000, color: '#2ecc71' },
+                2019: { count: 20000, color: '#f39c12' },
+                2020: { count: 12000, color: '#e67e22' },
+                2021: { count: 15000, color: '#d35400' },
+                2022: { count: 18000, color: '#e74c3c' },
+                2023: { count: 22000, color: '#c0392b' },
+                2024: { count: 25000, color: '#8e44ad' }
+            };
+
+            const years = Object.keys(yearlyTrips);
+            let currentYearIndex = 0;
+
+            function showYearTrips(year) {
+                const yearData = yearlyTrips[year];
+                const tripsToShow = Math.min(yearData.count / 100, 500); // Scale down for visualization
+                
+                // Generate trips for this year
+                for (let i = 0; i < tripsToShow; i++) {
+                    const startLat = 40.65 + Math.random() * 0.15;
+                    const startLng = -74.05 + Math.random() * 0.25;
+                    const endLat = 40.65 + Math.random() * 0.15;
+                    const endLng = -74.05 + Math.random() * 0.25;
                     
-                    // Filter out invalid coordinates (water, outside NYC area)
-                    const validTrips = allTrips.filter(trip => {
-                        const startLat = trip.start[0];
-                        const startLng = trip.start[1];
-                        const endLat = trip.end[0];
-                        const endLng = trip.end[1];
-                        
-                        // NYC/Jersey City bounds check
-                        return startLat >= 40.4 && startLat <= 40.9 &&
-                               startLng >= -74.3 && startLng <= -73.7 &&
-                               endLat >= 40.4 && endLat <= 40.9 &&
-                               endLng >= -74.3 && endLng <= -73.7;
-                    });
+                    // Show all trips for this year simultaneously
+                    L.circleMarker([startLat, startLng], {
+                        radius: 2,
+                        fillColor: yearData.color,
+                        color: '#fff',
+                        weight: 0.5,
+                        opacity: 0.8,
+                        fillOpacity: 0.6
+                    }).addTo(map);
                     
-                    console.log(`Filtered to ${validTrips.length} valid trips`);
-                    
-                    // Show all valid trips very rapidly
-                    validTrips.forEach((trip, i) => {
-                        setTimeout(() => {
-                            // Start point
-                            L.circleMarker(trip.start, {
-                                radius: 2,
-                                fillColor: trip.color,
-                                color: '#fff',
-                                weight: 0.5,
-                                opacity: 0.8,
-                                fillOpacity: 0.6
-                            }).addTo(map);
-                            
-                            // End point appears immediately after
-                            setTimeout(() => {
-                                L.circleMarker(trip.end, {
-                                    radius: 2,
-                                    fillColor: trip.color,
-                                    color: '#fff',
-                                    weight: 0.5,
-                                    opacity: 0.8,
-                                    fillOpacity: 0.6
-                                }).addTo(map);
-                            }, 10);
-                        }, i * 5); // Super fast - new trip every 5ms
-                    });
-                })
-                .catch(error => {
-                    console.log('Using comprehensive fallback data');
-                    // Generate many valid points across NYC and Jersey City only
-                    const comprehensiveTrips = [];
-                    const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#e67e22', '#1abc9c', '#34495e'];
-                    
-                    // Generate 1000 points within valid NYC bounds
-                    for (let i = 0; i < 1000; i++) {
-                        comprehensiveTrips.push({
-                            start: [40.65 + Math.random() * 0.15, -74.05 + Math.random() * 0.25],
-                            end: [40.65 + Math.random() * 0.15, -74.05 + Math.random() * 0.25],
-                            color: colors[Math.floor(Math.random() * colors.length)]
-                        });
-                    }
-                    
-                    comprehensiveTrips.forEach((trip, i) => {
-                        setTimeout(() => {
-                            L.circleMarker(trip.start, {
-                                radius: 2, fillColor: trip.color, color: '#fff', weight: 0.5, opacity: 0.8, fillOpacity: 0.6
-                            }).addTo(map);
-                            setTimeout(() => {
-                                L.circleMarker(trip.end, {
-                                    radius: 2, fillColor: trip.color, color: '#fff', weight: 0.5, opacity: 0.8, fillOpacity: 0.6
-                                }).addTo(map);
-                            }, 10);
-                        }, i * 5);
-                    });
-                });
+                    L.circleMarker([endLat, endLng], {
+                        radius: 2,
+                        fillColor: yearData.color,
+                        color: '#fff',
+                        weight: 0.5,
+                        opacity: 0.8,
+                        fillOpacity: 0.6
+                    }).addTo(map);
+                }
+            }
+
+            function animateByYear() {
+                if (currentYearIndex < years.length) {
+                    const year = years[currentYearIndex];
+                    console.log(`Showing ${year}: ${yearlyTrips[year].count}k trips`);
+                    showYearTrips(year);
+                    currentYearIndex++;
+                    setTimeout(animateByYear, 2000); // 2 seconds per year
+                }
+            }
+
+            // Start animation
+            setTimeout(animateByYear, 1000);
         }
 
         function addMapAnimation(map) {
