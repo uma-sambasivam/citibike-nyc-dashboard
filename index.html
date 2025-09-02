@@ -1793,20 +1793,20 @@
                 .style('font-size', Math.min(width/25, 20) + 'px')
                 .text('Monthly Usage: Weather Drives Behavior');
             
-            // Add small insights section positioned after chart is created
+            // Add responsive insights section positioned after chart is created
             setTimeout(() => {
                 const insightsDiv = container.append('div')
                     .style('position', 'absolute')
-                    .style('top', '120px')
+                    .style('top', Math.min(height * 0.2, 120) + 'px')
                     .style('left', '0')
                     .style('right', '0')
-                    .style('height', '200px')
+                    .style('height', Math.max(height * 0.4, 150) + 'px')
                     .style('pointer-events', 'none');
                 
                 const insights = [
-                    { number: 'Winter Low', label: 'Cold weather drops\nridership 85% below\nsummer peaks', x: '15%', y: '150px' },
-                    { number: 'June Peak', label: 'Perfect 75°F weather\ndrives 70k daily rides\nvs 8k in January', x: '42%', y: '80px' },
-                    { number: '9x Variation', label: 'Weather controls behavior\nmore than environmental\nconcerns drive usage', x: '75%', y: '100px' }
+                    { number: 'Winter Low', label: 'Cold weather drops\nridership 85% below\nsummer peaks', x: '15%', y: Math.max(height * 0.25, 80) + 'px' },
+                    { number: 'June Peak', label: 'Perfect 75°F weather\ndrives 70k daily rides\nvs 8k in January', x: '42%', y: Math.max(height * 0.15, 50) + 'px' },
+                    { number: '9x Variation', label: 'Weather controls behavior\nmore than environmental\nconcerns drive usage', x: '75%', y: Math.max(height * 0.2, 70) + 'px' }
                 ];
                 
                 insights.forEach(insight => {
@@ -1815,20 +1815,21 @@
                         .style('left', insight.x)
                         .style('top', insight.y)
                         .style('text-align', 'center')
-                        .style('padding', '6px 10px')
+                        .style('padding', Math.max(width * 0.008, 4) + 'px ' + Math.max(width * 0.012, 6) + 'px')
                         .style('background', 'rgba(255,255,255,0.95)')
                         .style('border-radius', '6px')
                         .style('box-shadow', '0 2px 6px rgba(0,0,0,0.15)')
-                        .style('pointer-events', 'auto');
+                        .style('pointer-events', 'auto')
+                        .style('max-width', Math.min(width * 0.25, 200) + 'px');
                     
                     insightDiv.append('div')
-                        .style('font-size', '14px')
+                        .style('font-size', Math.min(width * 0.02, 14) + 'px')
                         .style('font-weight', 'bold')
                         .style('color', '#667eea')
                         .text(insight.number);
                     
                     insightDiv.append('div')
-                        .style('font-size', '11px')
+                        .style('font-size', Math.min(width * 0.015, 11) + 'px')
                         .style('color', '#666')
                         .style('line-height', '1.2')
                         .style('white-space', 'pre-line')
@@ -2029,19 +2030,19 @@
             
             const radius = Math.min(width, height) / 6.5;
             const centerX = width / 2;
-            const amCenterX = centerX - radius * 0.8; // Move AM circle to the left
-            const pmCenterX = centerX + radius * 1.0; // Move PM circle further to the right
+            const amCenterX = centerX + radius * 1.0; // Move AM circle to the right
+            const pmCenterX = centerX - radius * 0.8; // Move PM circle to the left
             const amCenterY = height / 3.5;
             const pmCenterY = 2.8 * height / 4;
             
             // Calculate responsive font sizes and box dimensions
-            const baseFontSize = Math.max(Math.min(width / 80, 14), 10);
-            const titleFontSize = Math.max(Math.min(width / 70, 16), 12);
-            const subtitleFontSize = Math.max(Math.min(width / 90, 13), 10);
-            const bodyFontSize = Math.max(Math.min(width / 100, 12), 9);
+            const baseFontSize = Math.max(Math.min(width / 100, 14), 8);
+            const titleFontSize = Math.max(Math.min(width / 80, 16), 10);
+            const subtitleFontSize = Math.max(Math.min(width / 100, 13), 9);
+            const bodyFontSize = Math.max(Math.min(width / 120, 12), 8);
             
-            const boxWidth = Math.max(Math.min(width * 0.20, 240), 180);
-            const boxHeight = Math.max(Math.min(height * 0.16, 85), 70);
+            const boxWidth = Math.max(Math.min(width * 0.18, 200), 140);
+            const boxHeight = Math.max(Math.min(height * 0.15, 80), 60);
             const boxPadding = Math.max(Math.min(width * 0.02, 8), 4);
             
             // 24-hour data with realistic rush hour peaks
@@ -2163,10 +2164,14 @@
             
             // Add rush hour callouts
             setTimeout(() => {
-                // 8AM callout (right side of AM clock)
-                const am8Angle = (8 * 30 - 90) * Math.PI / 180;
-                const am8X = amCenterX + Math.cos(am8Angle) * (radius + 45) - (boxWidth / 2);
-                const am8Y = amCenterY + Math.sin(am8Angle) * (radius + 45) + (boxHeight / 2);
+                // Calculate responsive offset to prevent overlap on small screens
+                const minOffset = radius + 50;
+                const responsiveOffset = Math.max(minOffset, width * 0.2);
+                
+                // 8AM callout (8.5 o'clock position on AM clock - between 8 and 9 AM)
+                const am8Angle = (8.5 * 30 - 90) * Math.PI / 180;
+                const am8X = amCenterX + Math.cos(am8Angle) * responsiveOffset - (boxWidth / 2);
+                const am8Y = amCenterY + Math.sin(am8Angle) * responsiveOffset;
                 
                 const am8Group = svg.append('g');
                 am8Group.append('rect')
@@ -2196,7 +2201,6 @@
                     .style('fill', '#333')
                     .text('15k rides/hour');
                 
-                // Split long text into multiple lines for better fit
                 const morningText = 'Office workers choose bikes over crowded subways.';
                 const morningWords = morningText.split(' ');
                 const morningLine1 = morningWords.slice(0, 4).join(' ');
@@ -2218,11 +2222,9 @@
                     .style('fill', '#666')
                     .text(morningLine2);
                 
-                // 6PM callout (below Midday Business) - repositioned to avoid overlapping PM clock
-                const pm6Angle = (6 * 30 - 90) * Math.PI / 180;
-                // Position below the Midday Business box, moved slightly left
-                const pm6X = pmCenterX + radius * 2.7;
-                const pm6Y = pmCenterY + radius * 1.2;
+                // 6PM callout (aligned with midday business, positioned between 5-6 PM)
+                const pm6X = pmCenterX + Math.cos((1 * 30 - 90) * Math.PI / 180) * Math.max(radius + 90, width * 0.25) + (boxWidth / 2);
+                const pm6Y = pmCenterY + Math.sin((5.5 * 30 - 90) * Math.PI / 180) * responsiveOffset;
                 
                 const pm6Group = svg.append('g');
                 pm6Group.append('rect')
@@ -2252,7 +2254,6 @@
                     .style('fill', '#333')
                     .text('16k rides/hour');
                 
-                // Split long text into multiple lines for better fit
                 const eveningText = 'Evening exodus creates the day\'s busiest hour.';
                 const words = eveningText.split(' ');
                 const line1 = words.slice(0, 3).join(' ');
@@ -2276,8 +2277,8 @@
                 
                 // 10AM callout (weekend leisure)
                 const am10Angle = (10 * 30 - 90) * Math.PI / 180;
-                const am10X = amCenterX + Math.cos(am10Angle) * (radius + 45) - (boxWidth / 2);
-                const am10Y = amCenterY + Math.sin(am10Angle) * (radius + 45) - (boxHeight / 2);
+                const am10X = amCenterX + Math.cos(am10Angle) * responsiveOffset - (boxWidth / 2);
+                const am10Y = amCenterY + Math.sin(am10Angle) * responsiveOffset - (boxHeight / 2);
                 
                 const am10Group = svg.append('g');
                 am10Group.append('rect')
@@ -2307,7 +2308,6 @@
                     .style('fill', '#333')
                     .text('6k rides/hour');
                 
-                // Split long text into multiple lines for better fit
                 const weekendText = 'Weekend adventurers discover NYC neighborhoods.';
                 const weekendWords = weekendText.split(' ');
                 const weekendLine1 = weekendWords.slice(0, 3).join(' ');
@@ -2329,10 +2329,10 @@
                     .style('fill', '#666')
                     .text(weekendLine2);
                 
-                // 1PM callout (lunch hour) - moved even further right
-                const pm1Angle = (1 * 30 - 90) * Math.PI / 180;
-                const pm1X = pmCenterX + Math.cos(pm1Angle) * (radius + 85) + (boxWidth / 2);
-                const pm1Y = pmCenterY + Math.sin(pm1Angle) * (radius + 45);
+                // 1PM callout (2 o'clock position on PM clock)
+                const pm1Angle = (2 * 30 - 90) * Math.PI / 180;
+                const pm1X = pmCenterX + Math.cos(pm1Angle) * (radius + 50) + (boxWidth / 2);
+                const pm1Y = pmCenterY + Math.sin(pm1Angle) * (radius + 50);
                 
                 const pm1Group = svg.append('g');
                 pm1Group.append('rect')
@@ -2362,7 +2362,6 @@
                     .style('fill', '#333')
                     .text('7k rides/hour');
                 
-                // Split long text into multiple lines for better fit
                 const lunchText = 'Lunch meetings and errands fuel steady usage.';
                 const lunchWords = lunchText.split(' ');
                 const lunchLine1 = lunchWords.slice(0, 3).join(' ');
