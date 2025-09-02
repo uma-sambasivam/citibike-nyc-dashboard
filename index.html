@@ -2029,8 +2029,20 @@
             
             const radius = Math.min(width, height) / 6.5;
             const centerX = width / 2;
+            const amCenterX = centerX - radius * 0.8; // Move AM circle to the left
+            const pmCenterX = centerX + radius * 1.0; // Move PM circle further to the right
             const amCenterY = height / 3.5;
             const pmCenterY = 2.8 * height / 4;
+            
+            // Calculate responsive font sizes and box dimensions
+            const baseFontSize = Math.max(Math.min(width / 80, 14), 10);
+            const titleFontSize = Math.max(Math.min(width / 70, 16), 12);
+            const subtitleFontSize = Math.max(Math.min(width / 90, 13), 10);
+            const bodyFontSize = Math.max(Math.min(width / 100, 12), 9);
+            
+            const boxWidth = Math.max(Math.min(width * 0.20, 240), 180);
+            const boxHeight = Math.max(Math.min(height * 0.16, 85), 70);
+            const boxPadding = Math.max(Math.min(width * 0.02, 8), 4);
             
             // 24-hour data with realistic rush hour peaks
             const hourlyData = [];
@@ -2057,7 +2069,7 @@
             
             // AM Clock (top)
             const amData = hourlyData.filter(d => d.period === 'AM');
-            const amGroup = svg.append('g').attr('transform', `translate(${centerX},${amCenterY})`);
+            const amGroup = svg.append('g').attr('transform', `translate(${amCenterX},${amCenterY})`);
             
             amGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
             amGroup.append('text').attr('x', 0).attr('y', -radius - 40).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('AM');
@@ -2101,7 +2113,7 @@
             
             // PM Clock (bottom)
             const pmData = hourlyData.filter(d => d.period === 'PM');
-            const pmGroup = svg.append('g').attr('transform', `translate(${centerX},${pmCenterY})`);
+            const pmGroup = svg.append('g').attr('transform', `translate(${pmCenterX},${pmCenterY})`);
             
             pmGroup.append('circle').attr('r', radius + 10).attr('fill', 'none').attr('stroke', '#333').attr('stroke-width', 2);
             pmGroup.append('text').attr('x', 0).attr('y', radius + 50).attr('text-anchor', 'middle').style('font-size', '14px').style('font-weight', 'bold').text('PM');
@@ -2153,15 +2165,15 @@
             setTimeout(() => {
                 // 8AM callout (right side of AM clock)
                 const am8Angle = (8 * 30 - 90) * Math.PI / 180;
-                const am8X = centerX + Math.cos(am8Angle) * (radius + 45) - 109;
-                const am8Y = amCenterY + Math.sin(am8Angle) * (radius + 45) + 36;
+                const am8X = amCenterX + Math.cos(am8Angle) * (radius + 45) - (boxWidth / 2);
+                const am8Y = amCenterY + Math.sin(am8Angle) * (radius + 45) + (boxHeight / 2);
                 
                 const am8Group = svg.append('g');
                 am8Group.append('rect')
-                    .attr('x', am8X - 140)
-                    .attr('y', am8Y - 35)
-                    .attr('width', 280)
-                    .attr('height', 70)
+                    .attr('x', am8X - (boxWidth / 2))
+                    .attr('y', am8Y - (boxHeight / 2))
+                    .attr('width', boxWidth)
+                    .attr('height', boxHeight)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#d73027')
                     .attr('stroke-width', 2)
@@ -2169,40 +2181,55 @@
                 
                 am8Group.append('text')
                     .attr('x', am8X)
-                    .attr('y', am8Y - 8)
+                    .attr('y', am8Y - (boxHeight / 2) + 15)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '14px')
+                    .style('font-size', titleFontSize + 'px')
                     .style('font-weight', 'bold')
                     .style('fill', '#d73027')
                     .text('Morning Commute Peak');
                 
                 am8Group.append('text')
                     .attr('x', am8X)
-                    .attr('y', am8Y + 6)
+                    .attr('y', am8Y - (boxHeight / 2) + 35)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '12px')
+                    .style('font-size', subtitleFontSize + 'px')
                     .style('fill', '#333')
                     .text('15k rides/hour');
                 
+                // Split long text into multiple lines for better fit
+                const morningText = 'Office workers choose bikes over crowded subways.';
+                const morningWords = morningText.split(' ');
+                const morningLine1 = morningWords.slice(0, 4).join(' ');
+                const morningLine2 = morningWords.slice(4).join(' ');
+                
                 am8Group.append('text')
                     .attr('x', am8X)
-                    .attr('y', am8Y + 22)
+                    .attr('y', am8Y - (boxHeight / 2) + 50)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '11px')
+                    .style('font-size', bodyFontSize + 'px')
                     .style('fill', '#666')
-                    .text('Office workers choose bikes over crowded subways.');
+                    .text(morningLine1);
                 
-                // 6PM callout (bottom of PM clock)
+                am8Group.append('text')
+                    .attr('x', am8X)
+                    .attr('y', am8Y - (boxHeight / 2) + 65)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', bodyFontSize + 'px')
+                    .style('fill', '#666')
+                    .text(morningLine2);
+                
+                // 6PM callout (below Midday Business) - repositioned to avoid overlapping PM clock
                 const pm6Angle = (6 * 30 - 90) * Math.PI / 180;
-                const pm6X = centerX + Math.cos(pm6Angle) * (radius + 45) + 188;
-                const pm6Y = pmCenterY + Math.sin(pm6Angle) * (radius + 45) + 8;
+                // Position below the Midday Business box, moved slightly left
+                const pm6X = pmCenterX + radius * 2.7;
+                const pm6Y = pmCenterY + radius * 1.2;
                 
                 const pm6Group = svg.append('g');
                 pm6Group.append('rect')
-                    .attr('x', pm6X - 120)
-                    .attr('y', pm6Y - 35)
-                    .attr('width', 240)
-                    .attr('height', 70)
+                    .attr('x', pm6X - (boxWidth / 2))
+                    .attr('y', pm6Y - (boxHeight / 2))
+                    .attr('width', boxWidth)
+                    .attr('height', boxHeight)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#d73027')
                     .attr('stroke-width', 2)
@@ -2210,40 +2237,54 @@
                 
                 pm6Group.append('text')
                     .attr('x', pm6X)
-                    .attr('y', pm6Y - 8)
+                    .attr('y', pm6Y - (boxHeight / 2) + 15)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '14px')
+                    .style('font-size', titleFontSize + 'px')
                     .style('font-weight', 'bold')
                     .style('fill', '#d73027')
                     .text('Evening Rush Peak');
                 
                 pm6Group.append('text')
                     .attr('x', pm6X)
-                    .attr('y', pm6Y + 6)
+                    .attr('y', pm6Y - (boxHeight / 2) + 35)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '12px')
+                    .style('font-size', subtitleFontSize + 'px')
                     .style('fill', '#333')
                     .text('16k rides/hour');
                 
+                // Split long text into multiple lines for better fit
+                const eveningText = 'Evening exodus creates the day\'s busiest hour.';
+                const words = eveningText.split(' ');
+                const line1 = words.slice(0, 3).join(' ');
+                const line2 = words.slice(3).join(' ');
+                
                 pm6Group.append('text')
                     .attr('x', pm6X)
-                    .attr('y', pm6Y + 22)
+                    .attr('y', pm6Y - (boxHeight / 2) + 50)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '11px')
+                    .style('font-size', bodyFontSize + 'px')
                     .style('fill', '#666')
-                    .text('Evening exodus creates the day\'s busiest hour.');
+                    .text(line1);
+                
+                pm6Group.append('text')
+                    .attr('x', pm6X)
+                    .attr('y', pm6Y - (boxHeight / 2) + 65)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', bodyFontSize + 'px')
+                    .style('fill', '#666')
+                    .text(line2);
                 
                 // 10AM callout (weekend leisure)
                 const am10Angle = (10 * 30 - 90) * Math.PI / 180;
-                const am10X = centerX + Math.cos(am10Angle) * (radius + 45) - 100;
-                const am10Y = amCenterY + Math.sin(am10Angle) * (radius + 45) - 72;
+                const am10X = amCenterX + Math.cos(am10Angle) * (radius + 45) - (boxWidth / 2);
+                const am10Y = amCenterY + Math.sin(am10Angle) * (radius + 45) - (boxHeight / 2);
                 
                 const am10Group = svg.append('g');
                 am10Group.append('rect')
-                    .attr('x', am10X - 140)
-                    .attr('y', am10Y - 35)
-                    .attr('width', 280)
-                    .attr('height', 70)
+                    .attr('x', am10X - (boxWidth / 2))
+                    .attr('y', am10Y - (boxHeight / 2))
+                    .attr('width', boxWidth)
+                    .attr('height', boxHeight)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#9b59b6')
                     .attr('stroke-width', 2)
@@ -2251,40 +2292,54 @@
                 
                 am10Group.append('text')
                     .attr('x', am10X)
-                    .attr('y', am10Y - 8)
+                    .attr('y', am10Y - (boxHeight / 2) + 15)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '14px')
+                    .style('font-size', titleFontSize + 'px')
                     .style('font-weight', 'bold')
                     .style('fill', '#9b59b6')
                     .text('Weekend Explorer');
                 
                 am10Group.append('text')
                     .attr('x', am10X)
-                    .attr('y', am10Y + 6)
+                    .attr('y', am10Y - (boxHeight / 2) + 35)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '12px')
+                    .style('font-size', subtitleFontSize + 'px')
                     .style('fill', '#333')
                     .text('6k rides/hour');
                 
+                // Split long text into multiple lines for better fit
+                const weekendText = 'Weekend adventurers discover NYC neighborhoods.';
+                const weekendWords = weekendText.split(' ');
+                const weekendLine1 = weekendWords.slice(0, 3).join(' ');
+                const weekendLine2 = weekendWords.slice(3).join(' ');
+                
                 am10Group.append('text')
                     .attr('x', am10X)
-                    .attr('y', am10Y + 22)
+                    .attr('y', am10Y - (boxHeight / 2) + 50)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '11px')
+                    .style('font-size', bodyFontSize + 'px')
                     .style('fill', '#666')
-                    .text('Weekend adventurers discover NYC neighborhoods.');
+                    .text(weekendLine1);
                 
-                // 1PM callout (lunch hour)
+                am10Group.append('text')
+                    .attr('x', am10X)
+                    .attr('y', am10Y - (boxHeight / 2) + 65)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', bodyFontSize + 'px')
+                    .style('fill', '#666')
+                    .text(weekendLine2);
+                
+                // 1PM callout (lunch hour) - moved even further right
                 const pm1Angle = (1 * 30 - 90) * Math.PI / 180;
-                const pm1X = centerX + Math.cos(pm1Angle) * (radius + 45) + 144;
+                const pm1X = pmCenterX + Math.cos(pm1Angle) * (radius + 85) + (boxWidth / 2);
                 const pm1Y = pmCenterY + Math.sin(pm1Angle) * (radius + 45);
                 
                 const pm1Group = svg.append('g');
                 pm1Group.append('rect')
-                    .attr('x', pm1X - 120)
-                    .attr('y', pm1Y - 35)
-                    .attr('width', 240)
-                    .attr('height', 70)
+                    .attr('x', pm1X - (boxWidth / 2))
+                    .attr('y', pm1Y - (boxHeight / 2))
+                    .attr('width', boxWidth)
+                    .attr('height', boxHeight)
                     .attr('fill', 'rgba(255,255,255,0.95)')
                     .attr('stroke', '#f39c12')
                     .attr('stroke-width', 2)
@@ -2292,28 +2347,42 @@
                 
                 pm1Group.append('text')
                     .attr('x', pm1X)
-                    .attr('y', pm1Y - 8)
+                    .attr('y', pm1Y - (boxHeight / 2) + 15)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '14px')
+                    .style('font-size', titleFontSize + 'px')
                     .style('font-weight', 'bold')
                     .style('fill', '#f39c12')
                     .text('Midday Business');
                 
                 pm1Group.append('text')
                     .attr('x', pm1X)
-                    .attr('y', pm1Y + 6)
+                    .attr('y', pm1Y - (boxHeight / 2) + 35)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '12px')
+                    .style('font-size', subtitleFontSize + 'px')
                     .style('fill', '#333')
                     .text('7k rides/hour');
                 
+                // Split long text into multiple lines for better fit
+                const lunchText = 'Lunch meetings and errands fuel steady usage.';
+                const lunchWords = lunchText.split(' ');
+                const lunchLine1 = lunchWords.slice(0, 3).join(' ');
+                const lunchLine2 = lunchWords.slice(3).join(' ');
+                
                 pm1Group.append('text')
                     .attr('x', pm1X)
-                    .attr('y', pm1Y + 22)
+                    .attr('y', pm1Y - (boxHeight / 2) + 50)
                     .attr('text-anchor', 'middle')
-                    .style('font-size', '11px')
+                    .style('font-size', bodyFontSize + 'px')
                     .style('fill', '#666')
-                    .text('Lunch meetings and errands fuel steady usage.');
+                    .text(lunchLine1);
+                
+                pm1Group.append('text')
+                    .attr('x', pm1X)
+                    .attr('y', pm1Y - (boxHeight / 2) + 65)
+                    .attr('text-anchor', 'middle')
+                    .style('font-size', bodyFontSize + 'px')
+                    .style('fill', '#666')
+                    .text(lunchLine2);
                     
             }, 2500);
             
